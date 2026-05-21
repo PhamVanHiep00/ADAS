@@ -85,17 +85,17 @@ void warning_update(float distance)
 
     if (distance > WARNING_DIST_SAFE)
     {
-        /* ✅ An toàn */
+        /* An toàn */
         PIN_SET(GPIOC, LED_GREEN_PIN);   // Bật LED xanh
     }
     else if (distance > WARNING_DIST_MEDIUM)
     {
-        /* ⚠️ Cảnh báo trung bình */
+        /* ⚠Cảnh báo trung bình */
         PIN_SET(GPIOC, LED_YELLOW_PIN);  // Bật LED vàng
     }
     else
     {
-        /* 🚨 Nguy hiểm */
+        /* Nguy hiểm */
         PIN_SET(GPIOC, LED_RED_PIN);     // Bật LED đỏ
         PIN_SET(GPIOC, BUZZER_PIN);      // Bật buzzer
     }

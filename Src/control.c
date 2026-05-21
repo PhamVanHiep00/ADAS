@@ -6,9 +6,8 @@
 
 void GPIO_Init(void)
 {
-    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN
-                 |  RCC_AHB1ENR_GPIOBEN;
-
+    RCC->AHB1ENR |= (1 << 0);
+    RCC->AHB1ENR |= (1 << 1);
     /*
         PWM
 
@@ -50,7 +49,7 @@ void GPIO_Init(void)
 
 void TIM1_PWM_Init(void)
 {
-    RCC->APB2ENR |= RCC_APB2ENR_TIM1EN;
+    RCC->APB2ENR |= (1 << 0);
 
     TIM1->PSC = 16 - 1;
 

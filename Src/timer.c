@@ -3,7 +3,7 @@
 
 void timer_init(void)
 {
-    RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
+    RCC->APB1ENR |= (1 << 1);
 
     TIM3->PSC = 16 - 1;   // 1us tick
     TIM3->ARR = 0xFFFFFFFF;

@@ -81,6 +81,6 @@ int main(void)
         distance = get_distance();
         process(distance);
         uart_process(distance);
-        delay_ms(200);
+        delay_ms(300);
     }
 }
